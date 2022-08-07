@@ -67,7 +67,33 @@ body {
     margin-right: 0.5em;
     margin-left: 1.0em;
 }
-
+@media only screen and (max-width:900px){
+    .navbar{
+        padding-inline:20px;
+    }
+    .list{
+        display: none;
+    }
+    .button-small{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar:nth-child(1)::after{
+        content: "";
+        display: inline-block;
+        width:40px;
+        height:40px;
+        background-color: black;
+        background-image: url(./assets/hamburger-menu-more-2-svgrepo-com.svg);
+        background-size:40px 40px;
+    }
+    .line{
+        width:0;
+    }
+}
 /* banner */
 .hero{
     margin-top:10%;
@@ -92,4 +118,21 @@ body {
     font-weight: bold;
     font-size:20px;
     margin-top:20px;
+}
+@media only screen and (max-width:900px){
+    .hero{
+        margin-top:200px;
+        width:100%;
+        padding-inline:0;
+    }
+    .hero-heading{
+        font-size:40px;
+    }
+    .hero-description{
+        margin-top:10px;
+        font-size: medium;
+    }
+    .button-large{
+        margin-top:50px;
+    }
 }
